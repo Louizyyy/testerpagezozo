@@ -2,10 +2,12 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 interface IntroEnvelopeProps {
+  onOpenStart: () => void;
   onOpenComplete: () => void;
 }
 
 export default function IntroEnvelope({
+  onOpenStart,
   onOpenComplete,
 }: IntroEnvelopeProps) {
   const [isOpening, setIsOpening] = useState(false);
@@ -16,6 +18,7 @@ export default function IntroEnvelope({
   const handleOpen = () => {
     if (isOpening) return;
 
+    onOpenStart();
     setIsOpening(true);
 
     // Sequence of animations
