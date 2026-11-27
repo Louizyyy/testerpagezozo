@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import IntroEnvelope from './components/IntroEnvelope';
 import Hero from './components/Hero';
 import BirthdayDetails from './components/BirthdayDetails';
-import Program from './components/Program';
 import RSVP from './components/RSVP';
 import Gallery from './components/Gallery';
 import BirthdayMessage from './components/BirthdayMessage';
@@ -76,11 +75,9 @@ function App() {
           {/* <Navbar /> */}
           <main>
             <Hero />
-           <BirthdayDetails />
+            <BirthdayDetails />
             <Gallery />
             {/* <Celebrant /> */}
-            <Program />
-            {/* <Venue /> */}
             <RSVP />
             <BirthdayMessage />
           </main>
